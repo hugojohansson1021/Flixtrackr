@@ -23,7 +23,7 @@ function displayResults(results) {
     searchResults.innerHTML = '';
 
     results.forEach((result) => {
-        const { title, img, vtype, synopsis } = result;
+        const { title, img, vtype, synopsis, clist } = result;
 
         const resultContainer = document.createElement('div');
         resultContainer.classList.add('result');
@@ -37,12 +37,16 @@ function displayResults(results) {
         const vtypeElement = document.createElement('p');
         vtypeElement.textContent = `Type: ${vtype}`;
 
+        const clistElement = document.createElement('p');
+        clistElement.textContent = `Available in: ${clist}`;
+
         const synopsisElement = document.createElement('p');
         synopsisElement.textContent = synopsis;
 
         resultContainer.appendChild(imgElement);
         resultContainer.appendChild(titleElement);
         resultContainer.appendChild(vtypeElement);
+        resultContainer.appendChild(clistElement);
         resultContainer.appendChild(synopsisElement);
 
         searchResults.appendChild(resultContainer);
