@@ -23,16 +23,9 @@ async function fetchData(title) {
 
 
 function calculateCardsPerRow() {
-    if (window.innerWidth < 768) {
-      return 1; // For small screens, show one card per row
-    } else if (window.innerWidth < 992) {
-      return 2; // For medium screens, show two cards per row
-    } else if (window.innerWidth < 1200) {
-      return 3; // For large screens, show three cards per row
-    } else {
-      return 4; // For extra-large screens, show four cards per row
-    }
+    return 1; // Always show one card per row
   }
+  
 
 
 
@@ -85,3 +78,23 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchData(searchTerm);
     });
 });
+
+
+function performSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchTerm = searchInput.value;
+    fetchData(searchTerm);
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('search-button');
+    searchButton.addEventListener('click', performSearch); // Call the performSearch function
+  
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('keyup', (event) => {
+      if (event.key === 'Enter') {
+        performSearch(); // Call the performSearch function when Enter key is pressed
+      }
+    });
+  });
+  

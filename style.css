@@ -2,53 +2,53 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
+    overflow-x: hidden;
+  }
+  
+  header {
     background-color: #333;
     padding: 20px;
     text-align: center;
-}
-
-.logo {
-    color: #fff;
+  }
+  
+  .logo {
+    color: #fb1c1c;
     font-size: 24px;
     margin: 0;
-}
-
-.search-container {
+  }
+  
+  .search-container {
     text-align: center;
     margin-top: 50px;
-}
-
-#search-input {
+  }
+  
+  #search-input {
     padding: 10px;
     width: 300px;
     font-size: 16px;
-}
-
-#search-button {
+  }
+  
+  #search-button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
-}
-
-
-.movie-item h2 {
+  }
+  
+  .movie-item h2 {
     font-size: 16px;
     margin-top: 10px;
-}
-
-.movie-item img {
+  }
+  
+  .movie-item img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-}
-
-.movie-item button {
+  }
+  
+  .movie-item button {
     margin-top: auto;
     padding: 5px 10px;
     font-size: 14px;
@@ -56,43 +56,58 @@ header {
     color: #fff;
     border: none;
     cursor: pointer;
-}
-
-.movie-item button:hover {
+  }
+  
+  .movie-item button:hover {
     background-color: #555;
-}
+  }
+  
+  .clist-text {
+    max-width: max-content;
+    overflow: auto;
+    max-height: 450px;
+  }
+  
 
-
-
-.search-results {
+  .search-results {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .movie-item {
-    width: 23%;
     border: 1px solid #ccc;
     padding: 20px;
-    margin: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
   }
+  
+  /* Media queries for responsive design */
   
   @media screen and (max-width: 1200px) {
     .movie-item {
-      width: 31%;
+      width: 60%;
+      margin-right: 20px;
+      margin-left: 20px;
     }
   }
   
   @media screen and (max-width: 992px) {
     .movie-item {
-      width: 48%;
+      width: 80%;
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }
   
   @media screen and (max-width: 768px) {
     .movie-item {
       width: 100%;
+      margin-right: 5px;
+      margin-left: 5px;
     }
   }
   
