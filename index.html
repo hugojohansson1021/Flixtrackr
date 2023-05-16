@@ -2,18 +2,38 @@
 <html>
 <head>
     <title>FindFlix</title>
-<link rel="stylesheet" href="/FlixFind/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 class="logo">FindFlix</h1>
+        <nav class="top-navbar">
+            <h1 class="logo">FindFlix</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="/html/about.html" class="nav-link">About</a></li>
+                <li><a href="/html/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/html/news.html" class="nav-link">News</a></li>
+                <li><a href="/html/series.html" class="nav-link">Series</a></li>
+            </ul>
+        </nav>
     </header>
+    <h3>Serch for a movie title and see in what country you can watch the movie from using a VPN</h3>
     <div class="search-container">
         <input type="text" id="search-input" placeholder="Search movie titles">
         <button id="search-button">Search</button>
     </div>
 
     <div id="search-results"></div>
+
+    <footer>
+        <nav class="footer-navbar">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="/html/about.html" class="footer-link">About</a>
+          <a href="/html/contact.html" class="footer-link">Contact</a>
+          <a href="/html/news.html" class="footer-link">News</a>
+          <a href="/html/series.html" class="footer-link">series</a>
+        </nav>
+    </footer>
 
     <script src="script.js"></script>
 </body>

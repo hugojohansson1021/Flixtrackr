@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    color: #fb1c1c;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+
+
+  .top-navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+
+
+
+
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  .footer-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+
+
+  #news-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .news-article {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px; /* Lägg till det här stycket */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    max-height: 1000px;
+  }
+  
+  
+  .article-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .news-article + .news-article {
+    margin: 20px; /* Justera mellanrummet efter behov */
+  }
+  
+  
+  .article-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .article-image {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .article-content {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 20px ;
+    margin-bottom: 20px; 
+    white-space: pre-line;
+    max-height: 1000px;
+  }
+  
+  p {
+    line-height: 1.5; /* Anpassa värdet efter behov */
+    letter-spacing: 1px;
+    margin-bottom: 10px; /* Anpassa värdet efter behov */
+    padding: 10px; 
+    text-align: justify;
+    max-height: 1000px;
+  }
+  
+
+  
+  /* Media queries for responsive design */
+  
+  @media screen and (max-width: 1200px) {
+    .movie-item {
+      width: 60%;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .movie-item {
+      width: 80%;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .movie-item {
+      width: 100%;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+  

@@ -17,6 +17,37 @@ body {
     margin: 0;
   }
   
+
+
+  .top-navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+
+
+
+h3{
+  font-size: 18px;
+  text-align: center;
+}
+
+  
   .search-container {
     text-align: center;
     margin-top: 50px;
@@ -84,6 +115,44 @@ body {
     margin-bottom: 10px;
     box-sizing: border-box;
   }
+
+
+
+
+
+
+
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  .footer-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  
   
   /* Media queries for responsive design */
   
