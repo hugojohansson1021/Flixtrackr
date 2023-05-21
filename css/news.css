@@ -164,3 +164,26 @@ body {
     }
   }
   
+  .footer-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  /* Ny CSS-kod för mobilanpassning */
+  @media screen and (max-width: 768px) {
+    .footer-navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-link {
+      margin: 5px 0;
+    }
+  }

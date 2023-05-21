@@ -2,11 +2,10 @@
 <html>
 <head>
     <title>Flixtrackr</title>
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-
 
 
         <!-- Google tag (gtag.js) -->
@@ -22,9 +21,13 @@
 
 
         <nav class="top-navbar">
-            <h1 class="logo">Flixtrackr</h1>
+
+            <h3><a href="flixtrackr.html" class="logo" style="text-decoration: none;">Flixtrackr</a></h3>
+
+
+
             <ul class="nav-links">
-                <li><a href="../flixtrackr.html" class="nav-link">Home</a></li>
+                <li><a href="flixtrackr.html" class="nav-link">Home</a></li>
                 <li><a href="/html/about.html" class="nav-link">About</a></li>
                 <li><a href="/html/contact.html" class="nav-link">Contact</a></li>
                 <li><a href="/html/news.html" class="nav-link">News</a></li>
@@ -32,13 +35,17 @@
             </ul>
         </nav>
     </header>
+    <h3>Serch for a movie title and see in what country you can watch the movie from using a VPN</h3>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search movie titles">
+        <button id="search-button">Search</button>
+    </div>
 
-
-
+    <div id="search-results"></div>
 
     <footer>
         <nav class="footer-navbar">
-          <a href="../flixtrackr.html" class="footer-link">Home</a>
+          <a href="flixtrackr.html" class="footer-link">Home</a>
           <a href="/html/about.html" class="footer-link">About</a>
           <a href="/html/contact.html" class="footer-link">Contact</a>
           <a href="/html/news.html" class="footer-link">News</a>
@@ -46,5 +53,7 @@
         </nav>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
+
