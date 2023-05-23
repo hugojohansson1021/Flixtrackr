@@ -1,4 +1,3 @@
-
 // Get all elements with the class "article-content"
 const articleContents = document.querySelectorAll('.article-content');
 
@@ -34,9 +33,6 @@ function resizeArticles() {
 
     // Centrera horisontellt
     article.style.margin = '0 auto';
-
-    // Hantera överflödet av text
-    article.style.overflow = 'auto';
   });
 }
 

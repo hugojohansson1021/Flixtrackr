@@ -153,7 +153,81 @@ h3{
   }
   
   
-  
+
+/* CSS for small article cards */
+.article-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px; /* Add margin-top for separation */
+}
+
+.article-card .article-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.article-card .article-date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.article-card .article-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.article-card .article-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.article-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+.article-title a {
+  text-decoration: underline;
+}
+
+.news-article {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+#news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.news-article {
+  flex-basis: calc(50% - 10px); /* Adjust the width of each article to occupy 50% of the container minus the gap */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Adjust the width of articles for different screen sizes */
+@media screen and (max-width: 768px) {
+  .news-article {
+    flex-basis: 100%; /* Change to single column layout for smaller screens */
+  }
+}
+
+
   /* Media queries for responsive design */
   
   @media screen and (max-width: 1200px) {
