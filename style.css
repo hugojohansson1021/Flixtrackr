@@ -1,256 +1,225 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  header {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .logo {
-    color: #fb1c1c;
-    font-size: 24px;
-    margin: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
 
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
 
-  .top-navbar {
-    display: flex;
-    align-items: center;
-  }
+.logo {
+  color: #fb1c1c;
+  font-size: 24px;
+  margin: 0;
+}
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-  }
+.top-navbar {
+  display: flex;
+  align-items: center;
+}
 
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
 
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
 
-
-
-h3{
+h3 {
   font-size: 18px;
   text-align: center;
 }
 
-  
-  .search-container {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  #search-input {
-    padding: 10px;
-    width: 300px;
-    font-size: 16px;
-  }
-  
-  #search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .movie-item h2 {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  
-  .movie-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .movie-item button {
-    margin-top: auto;
-    padding: 5px 10px;
-    font-size: 14px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .movie-item button:hover {
-    background-color: #555;
-  }
-  
-  .clist-text {
-    max-width: max-content;
-    overflow: auto;
-    max-height: 450px;
-  }
-  
+.search-container {
+  text-align: center;
+  margin-top: 50px;
+}
 
-  .search-results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .movie-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-
-
-
-
-
-
-
-
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: auto;
-  }
-  
-  .footer-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline;
-  }
-  
-  
-
-/* CSS for small article cards */
-.article-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+#search-input {
   padding: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px; /* Add margin-top for separation */
+  width: 300px;
+  font-size: 16px;
 }
 
-.article-card .article-title {
-  font-size: 18px;
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 30%; /* Make the button round */
+}
+
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
-.article-card .article-date {
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 5px;
+.movie-item h2 {
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.article-card .article-image {
-  width: 100%;
-  max-width: 200px;
+.movie-item img {
+  max-width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
 
-.article-card .article-content {
+.movie-item button {
+  margin-top: auto;
+  padding: 5px 10px;
   font-size: 14px;
-  line-height: 1.5;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-.article-card {
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
+.movie-item button:hover {
+  background-color: #555;
+}
+
+.movie-item p.article-content {
+  flex-grow: 1;
 }
 
 
-.article-title a {
+
+.footer-navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+}
+
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
   text-decoration: underline;
 }
 
-.news-article {
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
 
 
 
 
-#news-container {
+/* articals  */
+
+
+.articles-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
 }
 
-.news-article {
-  flex-basis: calc(50% - 10px); /* Adjust the width of each article to occupy 50% of the container minus the gap */
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+.articalsOnHomePage {
+  width: 240px; /* Set a fixed width for the article cards */
+  border: 1px solid #595959;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
 }
 
-/* Adjust the width of articles for different screen sizes */
+.article-title {
+  margin-top: 0;
+}
+
+.article-title a {
+  text-decoration: none;
+  color: #333;
+}
+
+.article-date {
+  color: #777;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.article-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-image:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1200px) {
+  .movie-item {
+    width: 60%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .movie-item {
+    width: 80%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .news-article {
-    flex-basis: 100%; /* Change to single column layout for smaller screens */
+  .movie-item {
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }
-
-
-  /* Media queries for responsive design */
-  
-  @media screen and (max-width: 1200px) {
-    .movie-item {
-      width: 60%;
-      margin-right: 20px;
-      margin-left: 20px;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .movie-item {
-      width: 80%;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .movie-item {
-      width: 100%;
-      margin-right: 5px;
-      margin-left: 5px;
-    }
-  }
-  
