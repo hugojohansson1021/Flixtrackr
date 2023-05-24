@@ -38,9 +38,17 @@ header {
   text-decoration: none;
   margin-left: 20px;
 }
+.nav-link:hover{
+  color: #fb1c1c;
+}
 
 h3 {
   font-size: 18px;
+  text-align: center;
+}
+
+h1{
+  font-size: 30px;
   text-align: center;
 }
 
@@ -63,6 +71,9 @@ h3 {
   border: none;
   cursor: pointer;
   border-radius: 30%; /* Make the button round */
+}
+#search-button:hover {
+  color: #fb1c1c;
 }
 
 
@@ -87,6 +98,9 @@ h3 {
 .movie-item h2 {
   font-size: 16px;
   margin-top: 10px;
+}
+.movie-item h2:hover {
+  color: #fb1c1c;
 }
 
 .movie-item img {
@@ -176,6 +190,11 @@ h3 {
   color: #777;
   font-style: italic;
   margin-bottom: 5px;
+}
+.artical-image-text{
+  color: #595959;
+  font-style: italic;
+  font-size:11px ;
 }
 
 .article-image {
