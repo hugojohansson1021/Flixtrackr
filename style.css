@@ -52,6 +52,17 @@ h1{
   text-align: center;
 }
 
+.metadata{
+  font-size: 15px;
+  text-align: center;
+}
+
+.custom-link {
+  color: #ff0000; /* Byt ut med den färg du önskar använda, t.ex. röd (#ff0000) */
+  text-decoration: none; /* Tar bort understrykningen för länken */
+}
+
+
 .search-container {
   text-align: center;
   margin-top: 50px;
