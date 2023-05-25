@@ -44,6 +44,19 @@ body {
   }
 
 
+  .about-section {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Center horizontally with auto margin */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    max-height: 1500px;
+  }
+  
 
 
 

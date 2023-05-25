@@ -57,6 +57,13 @@ h1{
   text-align: center;
 }
 
+.individual-NOTE{
+  font-size: 15px;
+  text-align: center;
+  opacity: 30%;
+
+}
+
 .custom-link {
   color: #ff0000; /* Byt ut med den färg du önskar använda, t.ex. röd (#ff0000) */
   text-decoration: none; /* Tar bort understrykningen för länken */
@@ -109,6 +116,9 @@ h1{
 .movie-item h2 {
   font-size: 16px;
   margin-top: 10px;
+  color: #ff0000; /* Byt ut med den färg du önskar använda, t.ex. röd (#ff0000) */
+  text-decoration: none;
+
 }
 .movie-item h2:hover {
   color: #fb1c1c;

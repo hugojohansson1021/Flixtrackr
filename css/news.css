@@ -59,11 +59,22 @@ body {
     margin-top: auto;
   }
   
+  
+  
   .footer-navbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
   }
+  
   
   .footer-link {
     color: #fff;
@@ -74,8 +85,8 @@ body {
   .footer-link:hover {
     text-decoration: underline;
   }
-  
-  
+
+
 
 
   #news-container {

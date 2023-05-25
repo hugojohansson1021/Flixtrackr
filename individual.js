@@ -19,9 +19,9 @@ async function fetchMovieDetails(netflixId) {
   try {
     const response = await fetch(detailsUrl, options);
     const result = await response.json();
-    const availResult = await fetchAvailability(netflixId); // Hämta tillgänglighetsdata separat
+    const availResult = await fetchAvailability(netflixId);
     const availData = await availResult.json();
-    displayMovieDetails(result.results[0], availData); // Skicka både filmdetaljer och tillgänglighetsdata till displayMovieDetails
+    displayMovieDetails(result.results[0], availData);
   } catch (error) {
     console.error(error);
   }
@@ -50,17 +50,48 @@ function displayMovieDetails(movie, availData) {
   const titleElement = document.createElement('h2');
   titleElement.textContent = movie.title;
 
-  const synopsisElement = document.createElement('p');
-  synopsisElement.textContent = movie.synopsis;
+  const yearElement = document.createElement('p');
+  yearElement.textContent = `Year: ${movie.year}`;
+
+  const categoryElement = document.createElement('p');
+  categoryElement.textContent = `Category: ${movie.category}`;
+
+  const imdbratingElement = document.createElement('p');
+  imdbratingElement.textContent = `IMDb Rating: ${movie.imdbrating}`;
+
+  const directorElement = document.createElement('p');
+  directorElement.textContent = `Director: ${movie.director}`;
+
+  const castElement = document.createElement('p');
+  castElement.textContent = `Cast: ${movie.cast}`;
 
   const clistElement = document.createElement('p');
   const availableCountries = availData.results.map(country => country.country);
-  clistElement.textContent = `Available in: ${availableCountries.join(', ')}`;
+  clistElement.textContent = `Available in:-> ${availableCountries.join(', ')}`;
+
+  const emptySpaceElement = document.createElement('p');
+  emptySpaceElement.innerHTML = '&nbsp;'; // Add an empty space using HTML entity
+
+  const emptySpaceElements = document.createElement('p');
+  emptySpaceElement.innerHTML = '&nbsp;'; // Add an empty space using HTML entity
+
+
 
   movieDetails.appendChild(imgElement);
   movieDetails.appendChild(titleElement);
-  movieDetails.appendChild(synopsisElement);
+  movieDetails.appendChild(yearElement);
+  movieDetails.appendChild(categoryElement);
+  movieDetails.appendChild(imdbratingElement);
+  movieDetails.appendChild(directorElement);
+  movieDetails.appendChild(castElement);
   movieDetails.appendChild(clistElement);
+  movieDetails.appendChild(emptySpaceElement); 
+  movieDetails.appendChild(emptySpaceElements); //
+
+  // Center the content
+  movieDetails.style.display = 'flex';
+  movieDetails.style.flexDirection = 'column';
+  movieDetails.style.alignItems = 'center';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
