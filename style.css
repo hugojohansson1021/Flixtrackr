@@ -185,11 +185,11 @@ h1{
 .articles-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .articalsOnHomePage {
-  width: 240px; /* Set a fixed width for the article cards */
+  width: calc(25% - 20px); /* Set the width for each article card with 20px margin */
   border: 1px solid #595959;
   border-radius: 8px;
   padding: 10px;
@@ -197,6 +197,22 @@ h1{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
 }
+
+/* Adjust the width and margin of the article cards for smaller screens */
+@media (max-width: 768px) {
+  .articalsOnHomePage {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Adjust the width and margin of the article cards for even smaller screens */
+@media (max-width: 480px) {
+  .articalsOnHomePage {
+    width: calc(100% - 20px);
+  }
+}
+
+
 
 .article-title {
   margin-top: 0;
@@ -232,6 +248,164 @@ h1{
 
 
 
+
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  margin-right: 5px;
+}
+.flag-icon-IL {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/il.svg");
+}
+
+.flag-icon-LT {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/lt.svg");
+}
+
+.flag-icon-SK {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/sk.svg");
+}
+
+.flag-icon-AR {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ar.svg");
+}
+
+.flag-icon-IS {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/is.svg");
+}
+
+.flag-icon-MX {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/mx.svg");
+}
+
+.flag-icon-HK {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/hk.svg");
+}
+
+.flag-icon-BE {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/be.svg");
+}
+
+.flag-icon-CH {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ch.svg");
+}
+
+.flag-icon-GR {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/gr.svg");
+}
+
+.flag-icon-CZ {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/cz.svg");
+}
+
+.flag-icon-KR {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/kr.svg");
+}
+
+.flag-icon-PL {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/pl.svg");
+}
+
+.flag-icon-RU {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ru.svg");
+}
+
+.flag-icon-NL {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/nl.svg");
+}
+
+.flag-icon-SE {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/se.svg");
+}
+
+.flag-icon-SG {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/sg.svg");
+}
+
+.flag-icon-PT {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/pt.svg");
+}
+
+.flag-icon-ZA {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/za.svg");
+}
+
+
+.flag-icon-IT {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/it.svg");
+}
+
+.flag-icon-TH {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/th.svg");
+}
+
+.flag-icon-HU {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/hu.svg");
+}
+
+.flag-icon-TR {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/tr.svg");
+}
+
+.flag-icon-MY {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/my.svg");
+}
+
+.flag-icon-CO {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/co.svg");
+}
+
+.flag-icon-PH {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ph.svg");
+}
+
+.flag-icon-UA {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ua.svg");
+}
+
+.flag-icon-AU {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/au.svg");
+}
+
+.flag-icon-CA {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ca.svg");
+}
+
+.flag-icon-JP {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/jp.svg");
+}
+
+.flag-icon-FR {
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/fr.svg");
+}
+
+.flag-icon-IN{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/in.svg");
+}
+
+.flag-icon-DE{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/de.svg");
+}
+
+.flag-icon-ES{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/es.svg");
+}
+
+.flag-icon-BR{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/br.svg");
+}
+
+.flag-icon-RO{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ro.svg");
+}
+
+
+/* Add more flag icons for other countries as needed */
+
+
+.flag-icon.flag-icon-unknown {
+  background-color: red; /* Set a background color or any other styling you desire */
+}
 
 
 
