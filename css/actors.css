@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    color: #fb1c1c;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+
+
+  .top-navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .nav-link:hover{
+    color: #fb1c1c;
+  }
+
+
+  .about-section {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Center horizontally with auto margin */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    max-height: 1500px;
+  }
+  
+
+  
+
+
+h3 {
+    font-size: 23px;
+    text-align: center;
+  }
+  
+
+  h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h1{
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .metadata{
+    font-size: 15px;
+    
+  }
+  
+  .individual-NOTE{
+    font-size: 15px;
+    text-align: center;
+    opacity: 30%;
+  
+  }
+
+  .custom-link {
+    color: #ff0000; /* Byt ut med den färg du önskar använda, t.ex. röd (#ff0000) */
+    text-decoration: none; /* Tar bort understrykningen för länken */
+  }
+  
+/* --------- */
+
+
+.search-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #searchInput {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+  }
+  
+  #searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30%; /* Make the button round */
+  }
+  #searchButton:hover {
+    color: #fb1c1c;
+  }
+  
+
+
+
+
+  
+
+/* Styles for the movie list */
+.movie-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styles for the movie card */
+  .movie-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  .footer-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+
+
+/* CSS for the search results */
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* LOad more button*/
+  .load-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30%; /* Make the button round */
+  }
+  
+  .load-more-button:hover {
+    color: #fb1c1c;
+  }
+  
+  
+  .movie-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .movie-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-card a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .movie-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .load-more-button {
+    margin-top: 10px;
+  }
+  
+
+
+
+
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+  }
+  
+  .articalsOnHomePage {
+    width: calc(25% - 20px); /* Set the width for each article card with 20px margin */
+    border: 1px solid #595959;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+  }
+  .article-title {
+    margin-top: 0;
+  }
+  
+  .article-title a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .article-date {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  .artical-image-text{
+    color: #595959;
+    font-style: italic;
+    font-size:11px ;
+  }
+  
+  .article-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .article-image:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .articalsOnHomePage {
+      width: calc(50% - 20px);
+      justify-content: center;
+    }
+  }
+  
+  /* Adjust the width and margin of the article cards for even smaller screens */
+  @media (max-width: 480px) {
+    .articalsOnHomePage {
+      width: calc(100% - 20px);
+      justify-content: center;
+    }
+  }
+  
+
+
+  /* Media queries for responsive design */
+  
+  @media screen and (max-width: 1200px) {
+    .movie-item {
+      width: 60%;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .movie-item {
+      width: 80%;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .movie-item {
+      width: 100%;
+      margin-right: 5px;
+      margin-left: 5px;
+
+    }
+  }
+  
