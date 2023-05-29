@@ -399,6 +399,26 @@ h1{
   background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ro.svg");
 }
 
+.flag-icon-KR{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/kr.svg");
+}
+
+.flag-icon-ZA{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/za.svg");
+}
+.flag-icon-RU{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/ru.svg");
+}
+.flag-icon-US{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/us.svg");
+}
+
+.flag-icon-GB{
+  background-image: url("https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/flags/4x3/gb.svg");
+}
+
+
+
 
 /* Add more flag icons for other countries as needed */
 
