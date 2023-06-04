@@ -79,6 +79,9 @@ h3 {
   
   .metadata{
     font-size: 15px;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
     
   }
   
@@ -123,6 +126,25 @@ h3 {
   
 
 
+
+
+  .loader {
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, #F40000);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+    animation: s3 1s infinite linear;
+    display: none;
+  }
+  
+  @keyframes s3 {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
 
 
   
@@ -216,9 +238,13 @@ ul {
   }
   
   .movie-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+    width: calc(50% - 20px); /* Set the width for each article card with 20px margin */
+  border: 1px solid #595959;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
   }
   
   .movie-card a {
@@ -227,7 +253,10 @@ ul {
     color: #333;
     display: block;
     margin-bottom: 5px;
+    margin: 5px auto;
   }
+
+  
   
   .movie-card p {
     font-size: 14px;
@@ -239,6 +268,12 @@ ul {
     margin-top: 10px;
   }
   
+
+
+  
+
+
+
 
 
 

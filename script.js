@@ -9,12 +9,15 @@ const options = {
 
 async function fetchData(title) {
   try {
-    const searchUrl = `${url}?query=${encodeURIComponent(title)}`; // Include the query parameter
+    startLoadingAnimation();
+    const searchUrl = `${url}?query=${encodeURIComponent(title)}`;
     const response = await fetch(searchUrl, options);
     const result = await response.json();
     displayResults(result.results);
+    stopLoadingAnimation();
   } catch (error) {
     console.error(error);
+    stopLoadingAnimation();
   }
 }
 
@@ -63,6 +66,17 @@ function createMovieCard(result) {
   return resultContainer;
 }
 
+
+function stopLoadingAnimation() {
+  document.getElementById('loading-animation').style.display = 'none';
+}
+
+function startLoadingAnimation() {
+  document.getElementById('loading-animation').style.display = 'block';
+}
+
+
+
 // Function to display the movie cards
 function displayResults(results) {
   const searchResults = document.getElementById('search-results');
@@ -81,8 +95,22 @@ function displayResults(results) {
 function performSearch() {
   const searchInput = document.getElementById('search-input');
   const searchTerm = searchInput.value;
-  fetchData(searchTerm);
+
+  if (searchTerm.trim() !== '') {
+    const loadingAnimation = document.getElementById('loading-animation');
+    loadingAnimation.style.display = 'block';
+
+    fetchData(searchTerm)
+      .then(() => {
+        loadingAnimation.style.display = 'none';
+      })
+      .catch((error) => {
+        console.error(error);
+        loadingAnimation.style.display = 'none';
+      });
+  }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchButton = document.getElementById('search-button');
@@ -95,8 +123,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
-
-
-

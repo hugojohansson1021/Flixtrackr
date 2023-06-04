@@ -1,0 +1,155 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color:#333
+}
+
+p {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#navigationwrap {
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+}
+
+#navigation {
+    height: 40px;
+    background: #FFCC33;
+    border-radius: 10px;
+    border: 1px solid #ebb81f;
+    margin: 5px;
+}
+
+#contentwrap {
+    width: 700px;
+    float: left;
+    margin: 0 auto;
+}
+
+#content {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+}
+
+#leftcolumnwrap {
+    width: 150px;
+    float: left;
+    margin: 0 auto;
+}
+
+#leftcolumn {
+    background: #33CCFF;
+    border-radius: 10px;
+    border: 1px solid #1fb8eb;
+    margin: 5px;
+}
+
+#rightcolumnwrap {
+    width: 150px;
+    float: left;
+    margin: 0 auto;
+}
+
+#rightcolumn {
+    background: #CC33FF;
+    border-radius: 10px;
+    border: 1px solid #b81feb;
+    margin: 5px;
+}
+
+#footerwrap {
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+    clear: both;
+}
+
+#footer {
+    height: 40px;
+    background: #33FF66;
+    border-radius: 10px;
+    border: 1px solid #1feb52;
+    margin: 5px;
+}
+
+
+
+
+
+#leftcolumn {
+    background: #33CCFF;
+    border-radius: 10px;
+    border: 1px solid #1fb8eb;
+    margin: 5px;
+  }
+  
+  #rightcolumn {
+    background: #CC33FF;
+    border-radius: 10px;
+    border: 1px solid #b81feb;
+    margin: 5px;
+  }
+  
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .articalsOnHomePage {
+    width: 100%; /* Adjust the width to occupy the full width of the columns */
+    border: 1px solid #595959;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+  }
+  
+  /* Adjust the width and margin of the article cards for smaller screens */
+  @media (max-width: 768px) {
+    .articalsOnHomePage {
+      width: 100%;
+    }
+  }
+  
+  /* Adjust the width and margin of the article cards for even smaller screens */
+  @media (max-width: 480px) {
+    .articalsOnHomePage {
+      width: 100%;
+    }
+  }
+  
+  .article-title {
+    margin-top: 0;
+  }
+  
+  .article-title a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .article-date {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  .article-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .article-image:hover {
+    opacity: 0.8;
+  }
+  

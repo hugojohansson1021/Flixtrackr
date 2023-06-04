@@ -13,9 +13,13 @@ searchInput.addEventListener('keydown', async (event) => {
 });
 
 // API function to fetch actor data
+// API function to fetch actor data
 async function fetchActorData() {
   try {
     const actorName = searchInput.value;
+    const loadingAnimation = document.getElementById('loading-animation');
+    loadingAnimation.style.display = 'block';
+
     const response = await fetch(`https://unogsng.p.rapidapi.com/people?name=${actorName}`, {
       method: 'GET',
       headers: {
@@ -23,6 +27,8 @@ async function fetchActorData() {
         'X-RapidAPI-Host': 'unogsng.p.rapidapi.com'
       }
     });
+
+    loadingAnimation.style.display = 'none'; // Stop the loading animation
 
     const data = await response.json();
 
@@ -39,6 +45,7 @@ async function fetchActorData() {
   }
 }
 
+
 let startIndex = 0; // Start index for displaying movie titles
 const resultsPerPage = 10; // Number of movie titles to display per page
 
@@ -47,7 +54,7 @@ async function displayResults(results) {
   resultsDiv.innerHTML = '';
 
   const heading = document.createElement('h3');
-  heading.textContent = `Found ${results.length} movies:`;
+  heading.textContent = `Found ${results.length} movies for actor: ${searchInput.value}`;
   resultsDiv.appendChild(heading);
 
   const ul = document.createElement('ul');
@@ -69,7 +76,7 @@ async function displayResults(results) {
     li.appendChild(link);
 
     const actorName = document.createElement('p');
-    actorName.textContent = result.actor;
+    actorName.textContent = result.actor; // Display the actor's name
     li.appendChild(actorName);
 
     const imageUrl = await fetchImage(result.netflixid); // Fetch the image URL for the movie
@@ -104,6 +111,7 @@ async function displayResults(results) {
     resultsDiv.appendChild(loadMoreButton);
   }
 }
+
 
 // Rest of the code remains the same
 

@@ -101,11 +101,6 @@ body {
   
 
 
-  
-  
-
-
-
   .article-image-container {
     text-align: center;
   }
@@ -201,6 +196,72 @@ body {
   }
   
 /*  css for a specifik artical */
+
+
+
+
+
+
+
+
+
+
+/*  css for extra artical cards */
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.articalsOnHomePage {
+  width: calc(25% - 20px); /* Set the width for each article card with 20px margin */
+  border: 1px solid #595959;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+}
+
+/* Adjust the width and margin of the article cards for smaller screens */
+@media (max-width: 768px) {
+  .articalsOnHomePage {
+    width: calc(50% - 20px);
+    border: 1px solid #595959;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  }
+}
+
+/* Adjust the width and margin of the article cards for even smaller screens */
+@media (max-width: 480px) {
+  .articalsOnHomePage {
+    width: calc(100% - 20px);
+    border: 1px solid #595959;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  }
+}
+
+
+/*  css for extra artical cards */
+
+
+
+
+
+
+
+
+
+
 
 
 
