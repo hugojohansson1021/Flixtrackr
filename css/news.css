@@ -42,52 +42,13 @@ body {
     color: #fb1c1c;
   }
 
-
-
-
-
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: auto;
-  }
-  
-  
-  
-  .footer-navbar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 0;
-    color: #fff;
-    text-align: center;
-  }
-  
-  
-  .footer-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline;
-  }
-
-
-
+ 
   #news-container {
     display: flex;
     flex-wrap: wrap;
@@ -138,15 +99,148 @@ body {
     max-height: 1500px;
   }
   
+
+
+  
+  
+
+
+
+  .article-image-container {
+    text-align: center;
+  }
+  
+  
+
+  .article-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Set margin to auto and specify top and bottom margins to 20px */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  
+  
+  .image-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .article-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .article-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px auto;
+    
+  }
+  
+  .article-content {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    white-space: pre-line;
+    max-height: 1500px;
+  }
+  
   p {
     line-height: 1.5;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    padding: 10px;
+    margin: 20px auto;
     text-align: justify;
     max-height: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
+  
+  
+
+
+  /*  css for a specifik artical */
+
+
+  .article-image-card {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin: 20px auto;
+  }
+  
+  .movieTitles {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    margin: 20px auto;
+  }
+  
+  .budgetText {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+    margin: 20px auto;
+  }
+  
+  .worldWideBoxOffice {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    margin: 20px auto;
+  }
+  
+/*  css for a specifik artical */
+
+
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+    margin-top: auto;
+  }
+  
+  
+  
+  .footer-navbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    padding-top: 4px;
+  }
+  
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+
+
   /* Media queries for responsive design */
   
   @media screen and (max-width: 1200px) {

@@ -55,6 +55,8 @@ h1{
 .metadata{
   font-size: 15px;
   text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .individual-NOTE{
