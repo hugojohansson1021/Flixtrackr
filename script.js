@@ -151,7 +151,7 @@ document.getElementById('search-button').addEventListener('click', function() {
 
 
 
-
+/*
 document.getElementById('search-button').addEventListener('click', function() {
   // Hämta användarens IP-adress med ipify API.
   $.getJSON('https://api64.ipify.org?format=json', function(data) {
@@ -178,6 +178,6 @@ document.getElementById('search-button').addEventListener('click', function() {
       });
   });
 });
-
+*/
 
 
