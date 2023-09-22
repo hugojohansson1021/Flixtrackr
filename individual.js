@@ -165,3 +165,6 @@ function getCountryCode(country) {
 document.addEventListener('DOMContentLoaded', () => {
   fetchMovieDetails(netflixId);
 });
+
+
+

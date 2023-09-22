@@ -141,3 +141,22 @@ async function fetchImage(netflixId) {
     return null; // Return null if fetching the image fails
   }
 }
+
+
+
+document.getElementById('searchButton').addEventListener('click', function() {
+  // Skapa en XMLHttpRequest för att skicka data till Discord-webhook.
+  var xhr = new XMLHttpRequest();
+  var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
+
+  xhr.open('POST', webhookURL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  var message = {
+      content: 'Användare har sökt efter en Skådespelare'
+  };
+
+  xhr.send(JSON.stringify(message));
+
+  //alert('Meddelande skickat till Discord!');
+});

@@ -123,3 +123,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+
+
+
+
+document.getElementById('search-button').addEventListener('click', function() {
+  // Skapa en XMLHttpRequest för att skicka data till Discord-webhook.
+  var xhr = new XMLHttpRequest();
+  var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
+
+  xhr.open('POST', webhookURL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  var message = {
+      content: 'Användare har sökt efter en film Titel'
+  };
+
+  xhr.send(JSON.stringify(message));
+
+  //alert('Meddelande skickat till Discord!');
+});
+
+
+
+
+
+document.getElementById('search-button').addEventListener('click', function() {
+  // Hämta användarens IP-adress med ipify API.
+  $.getJSON('https://api64.ipify.org?format=json', function(data) {
+      var userIP = data.ip;
+
+      // Anropa IP Geolocation API för att hämta geolokalisering.
+      $.getJSON(`https://ipgeolocation.abstractapi.com/v1/?api_key=9F952A55E59F6E07B1262C326072F079&ip_address=${userIP}`, function(geoData) {
+          // Hämta information från geolokaliseringssvaret.
+          var country = geoData.country;
+          var region = geoData.region;
+          var city = geoData.city;
+          var lat = geoData.latitude;
+          var lon = geoData.longitude;
+
+          // Skapa meddelande för Discord.
+          var message = {
+              content: `Användarens geolokalisering:\nLand: ${country}\nRegion: ${region}\nStad: ${city}\nLatitud: ${lat}\nLongitud: ${lon}`
+          };
+
+          // Skicka meddelandet till Discord via en Discord-webhook.
+          var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
+          
+          $.post(webhookURL, JSON.stringify(message));
+      });
+  });
+});
