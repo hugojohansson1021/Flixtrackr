@@ -150,52 +150,68 @@ document.getElementById('search-button').addEventListener('click', function() {
 });
 
 
-document.getElementById('search-button').addEventListener('click', function() {
-  // Skapa en XMLHttpRequest för att skicka data till Discord-webhook.
-  var xhr = new XMLHttpRequest();
-  var webhookURL = 'https://discord.com/api/webhooks/1154933075734695936/FrxC0nRffQrEKVdpw0UonXkboRt5KfLxTg3ltnN_Lwy2Sb1EdMvx0fvQRr6Mrf_0hCDg';
-
-  xhr.open('POST', webhookURL, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-
-  var message = {
-      content: 'Användare har sökt efter en film Titel'
-  };
-
-  xhr.send(JSON.stringify(message));
-
-  //alert('Meddelande skickat till Discord!');
-});
 
 
 
-/*
-document.getElementById('search-button').addEventListener('click', function() {
-  // Hämta användarens IP-adress med ipify API.
-  $.getJSON('https://api64.ipify.org?format=json', function(data) {
-      var userIP = data.ip;
 
-      // Anropa IP Geolocation API för att hämta geolokalisering.
-      $.getJSON(`https://ipgeolocation.abstractapi.com/v1/?api_key=9F952A55E59F6E07B1262C326072F079&ip_address=${userIP}`, function(geoData) {
-          // Hämta information från geolokaliseringssvaret.
-          var country = geoData.country;
-          var region = geoData.region;
-          var city = geoData.city;
-          var lat = geoData.latitude;
-          var lon = geoData.longitude;
+// Vänta tills dokumentet har laddats helt
+$(document).ready(function() {
+  // Här kan du använda jQuery
 
-          // Skapa meddelande för Discord.
-          var message = {
-              content: `Användarens geolokalisering:\nLand: ${country}\nRegion: ${region}\nStad: ${city}\nLatitud: ${lat}\nLongitud: ${lon}`
-          };
+  // Exempel: När knappen klickas
+  $('#my-button').click(function() {
+      // Ändra texten på knappen
+      $(this).text('Klickade på knappen!');
 
-          // Skicka meddelandet till Discord via en Discord-webhook.
-          var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
-          
-          $.post(webhookURL, JSON.stringify(message));
-      });
+      // Skapa ett nytt element och lägg till det i kroppen av sidan
+      var newElement = $('<p>Nytt element med jQuery!</p>');
+      $('body').append(newElement);
   });
 });
-*/
 
 
+
+
+
+document.getElementById('search-button').addEventListener('click', function() {
+  // Hämta användarens IP-adress med ipify API.
+  $.getJSON('https://api.ipify.org?format=json', function(data) {
+    var userIP = data.ip;
+    console.log('Användarens IP-adress:', userIP);
+
+    // Anropa IP2Location API för att hämta geolokalisering.
+    var apiKey = '9F952A55E59F6E07B1262C326072F079';
+    var apiUrl = `https://api.ip2location.io/?key=${apiKey}&ip=${userIP}`;
+
+    $.getJSON(apiUrl, function(geoData) {
+      // Logga hela geolokaliseringssvaret för inspektion.
+      console.log('Geolokaliseringssvar:', geoData);
+
+      // Hämta information från geolokaliseringssvaret.
+      var country = geoData.country_name;
+      var region = geoData.region_name;
+      var city = geoData.city_name;
+      var lat = geoData.latitude;
+      var lon = geoData.longitude;
+
+      // Skapa meddelande för Discord.
+      var message = {
+        content: `Användarens geolokalisering:\nLand: ${country}\nRegion: ${region}\nStad: ${city}\nLatitud: ${lat}\nLongitud: ${lon}`
+      };
+
+      // Logga meddelandet som ska skickas till Discord för inspektion.
+      console.log('Meddelande till Discord:', message);
+
+      // Skicka meddelandet till Discord via en Discord-webhook.
+      var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
+
+      $.post(webhookURL, JSON.stringify(message))
+        .done(function() {
+          console.log('Meddelande skickat till Discord!');
+        })
+        .fail(function(error) {
+          console.error('Fel vid sändning till Discord:', error);
+        });
+    });
+  });
+});
