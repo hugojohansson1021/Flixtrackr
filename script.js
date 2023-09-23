@@ -148,6 +148,22 @@ document.getElementById('search-button').addEventListener('click', function() {
 });
 
 
+document.getElementById('search-button').addEventListener('click', function() {
+  // Skapa en XMLHttpRequest för att skicka data till Discord-webhook.
+  var xhr = new XMLHttpRequest();
+  var webhookURL = 'https://discord.com/api/webhooks/1154933075734695936/FrxC0nRffQrEKVdpw0UonXkboRt5KfLxTg3ltnN_Lwy2Sb1EdMvx0fvQRr6Mrf_0hCDg';
+
+  xhr.open('POST', webhookURL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  var message = {
+      content: 'Användare har sökt efter en film Titel'
+  };
+
+  xhr.send(JSON.stringify(message));
+
+  //alert('Meddelande skickat till Discord!');
+});
 
 
 
