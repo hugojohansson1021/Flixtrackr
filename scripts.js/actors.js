@@ -154,7 +154,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
   xhr.setRequestHeader('Content-Type', 'application/json');
 
   var message = {
-      content: 'Användare har sökt efter en skådespelare '
+      content: '"Användare har sökt efter en skådespelare"'
   };
 
   xhr.send(JSON.stringify(message));
