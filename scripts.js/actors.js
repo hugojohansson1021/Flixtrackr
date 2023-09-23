@@ -149,7 +149,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
   var xhr = new XMLHttpRequest();
   var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
 
-
+  
   xhr.open('POST', webhookURL, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
 

