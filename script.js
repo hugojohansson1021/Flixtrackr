@@ -154,7 +154,7 @@ document.getElementById('search-button').addEventListener('click', function() {
 
 
 
-
+/*
 
 // Vänta tills dokumentet har laddats helt
 $(document).ready(function() {
@@ -171,7 +171,7 @@ $(document).ready(function() {
   });
 });
 
-
+*/
 
 
 
