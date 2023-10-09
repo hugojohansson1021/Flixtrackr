@@ -1,167 +1,144 @@
 body {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-p {
-  padding: 10px;
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
 }
 
-#wrapper {
-  margin: 0 auto;
-  width: 1000px;
+.logo {
+  color: #fb1c1c;
+  font-size: 24px;
+  margin: 0;
 }
 
-#navigationwrap {
-  width: 1000px;
-  float: left;
-  margin: 0 auto;
-}
-
-#navigation {
-  height: 40px;
-  background: #FFCC33;
-  border-radius: 10px;
-  border: 1px solid #ebb81f;
-  margin: 5px;
-}
-
-#contentwrap {
-  width: 700px;
-  float: left;
-  margin: 0 auto;
-}
-
-#content {
-  background: #FFFFFF;
-  border-radius: 10px;
-  border: 1px solid #ebebeb;
-  margin: 5px auto;
-  clear: both;
-}
-
-#leftcolumnwrap {
-  width: 150px;
-  float: left;
-  margin: 0 auto;
-}
-
-#leftcolumn {
-  background: #33CCFF;
-  border-radius: 10px;
-  border: 1px solid #1fb8eb;
-  margin: 5px;
-}
-
-#rightcolumnwrap {
-  width: 150px;
-  float: left;
-  margin: 0 auto;
-}
-
-#rightcolumn {
-  background: #CC33FF;
-  border-radius: 10px;
-  border: 1px solid #b81feb;
-  margin: 5px;
-}
-
-#footerwrap {
-  width: 1000px;
-  float: left;
-  margin: 0 auto;
-  clear: both;
-}
-
-#footer {
-  height: 40px;
-  background: #33FF66;
-  border-radius: 10px;
-  border: 1px solid #1feb52;
-  margin: 5px;
-}
-
-/* Adjustments for Article Layout */
 
 
-.articles-container {
+.top-navbar {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
 }
 
-.articalsOnHomePage {
-  width: 45%; /* Adjust the width as per your preference */
-  border: 1px solid #595959;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f7f7f7;
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
-/* Media Queries for Responsiveness */
 
-@media (max-width: 768px) {
-  #wrapper {
-    width: 100%;
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.nav-link:hover{
+  color: #fb1c1c;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
+  margin-top: auto;
+}
+
+
+
+.footer-navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  padding-top: 4px;
+}
+
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Media queries for responsive design */
+
+@media screen and (max-width: 1200px) {
+  .news-article {
+    width: 60%;
+    margin-right: 20px;
+    margin-left: 20px;
   }
+}
 
-  #navigationwrap,
-  #contentwrap,
-  #leftcolumnwrap,
-  #rightcolumnwrap,
-  #footerwrap {
-    width: 100%;
-    float: none;
-    margin: 0;
+@media screen and (max-width: 992px) {
+  .news-article {
+    width: 80%;
+    margin-right: 10px;
+    margin-left: 10px;
   }
+}
 
-  .articles-container {
+@media screen and (max-width: 768px) {
+  .news-article {
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+.footer-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* New CSS code for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .footer-navbar {
     flex-direction: column;
+    text-align: center;
   }
 
-  .articalsOnHomePage {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  #navigation {
-    height: auto;
-  }
-}
-
-
-/* Media Queries for Responsiveness */
-
-@media (max-width: 768px) {
-  #wrapper {
-    width: 100%;
-  }
-
-  #navigationwrap,
-  #contentwrap,
-  #leftcolumnwrap,
-  #rightcolumnwrap,
-  #footerwrap {
-    width: 100%;
-    float: none;
-    margin: 0;
-  }
-
-  .articles-container {
-    flex-direction: column;
-  }
-
-  .articalsOnHomePage {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  #navigation {
-    height: auto;
+  .footer-link {
+    margin: 5px 0;
   }
 }

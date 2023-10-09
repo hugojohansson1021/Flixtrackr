@@ -251,15 +251,42 @@ body {
 }
 
 
+
+
+
+
+.side-panel {
+  width: 20%; /* Anpassa bredden efter ditt behov */
+  padding: 20px;
+  background-color: #f2f2f2; /* Bakgrundsfärg för sidorutorna */
+  float: left; /* Placera till vänster */
+  margin-right: 20px; /* Avstånd mellan sidorutorna och artikelinnehållet */
+}
+
+#left-panel {
+  margin-left: 0; /* Om du vill ha sidorutan på vänster sida, använd inte detta */
+}
+
+#right-panel {
+  float: right; /* Placera till höger */
+  margin-right: 0; /* Om du vill ha sidorutan på höger sida, använd inte detta */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*  css for extra artical cards */
-
-
-
-
-
-
-
-
 
 
 
