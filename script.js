@@ -1,3 +1,9 @@
+
+
+
+
+
+
 const url = 'https://unogsng.p.rapidapi.com/search';
 const options = {
   method: 'GET',
@@ -8,18 +14,38 @@ const options = {
 };
 
 async function fetchData(title) {
+  startLoadingAnimation();
   try {
-    startLoadingAnimation();
     const searchUrl = `${url}?query=${encodeURIComponent(title)}`;
+    console.log('Fetching:', searchUrl); // Logga den fullständiga URL:en
     const response = await fetch(searchUrl, options);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const result = await response.json();
-    displayResults(result.results);
-    stopLoadingAnimation();
+    console.log('API response:', result); // Logga svaret från API:et
+    if (!result.results || result.total === 0) {
+      console.log('Inga resultat hittades.');
+      displayNoResultsMessage(); // Visa meddelande när inga resultat finns
+    } else {
+      displayResults(result.results);
+    }
   } catch (error) {
-    console.error(error);
+    console.error('Ett fel uppstod under anropet till API:', error);
+    displayNoResultsMessage(); // Visa meddelande även vid andra typer av fel
+  } finally {
     stopLoadingAnimation();
   }
 }
+
+function displayNoResultsMessage() {
+  const searchResults = document.getElementById('search-results');
+  searchResults.innerHTML = '<div class="no-results">Sorry, No result.</div>'; // Anpassa denna HTML till din sidas design
+}
+
+
+
+
 
 function calculateCardsPerRow() {
   return 1; // Always show one card per row
@@ -154,66 +180,5 @@ document.getElementById('search-button').addEventListener('click', function() {
 
 
 
-/*
-
-// Vänta tills dokumentet har laddats helt
-$(document).ready(function() {
-  // Här kan du använda jQuery
-
-  // Exempel: När knappen klickas
-  $('#my-button').click(function() {
-      // Ändra texten på knappen
-      $(this).text('Klickade på knappen!');
-
-      // Skapa ett nytt element och lägg till det i kroppen av sidan
-      var newElement = $('<p>Nytt element med jQuery!</p>');
-      $('body').append(newElement);
-  });
-});
-
-*/
 
 
-
-document.getElementById('search-button').addEventListener('click', function() {
-  // Hämta användarens IP-adress med ipify API.
-  $.getJSON('https://api.ipify.org?format=json', function(data) {
-    var userIP = data.ip;
-    console.log('Användarens IP-adress:', userIP);
-
-    // Anropa IP2Location API för att hämta geolokalisering.
-    var apiKey = '9F952A55E59F6E07B1262C326072F079';
-    var apiUrl = `https://api.ip2location.io/?key=${apiKey}&ip=${userIP}`;
-
-    $.getJSON(apiUrl, function(geoData) {
-      // Logga hela geolokaliseringssvaret för inspektion.
-      console.log('Geolokaliseringssvar:', geoData);
-
-      // Hämta information från geolokaliseringssvaret.
-      var country = geoData.country_name;
-      var region = geoData.region_name;
-      var city = geoData.city_name;
-      var lat = geoData.latitude;
-      var lon = geoData.longitude;
-
-      // Skapa meddelande för Discord.
-      var message = {
-        content: `"Användarens geolokalisering:\nLand: ${country}\nRegion: ${region}\nStad: ${city}\nLatitud: ${lat}\nLongitud: ${lon}"`
-      };
-
-      // Logga meddelandet som ska skickas till Discord för inspektion.
-      console.log('Meddelande till Discord:', message);
-
-      // Skicka meddelandet till Discord via en Discord-webhook.
-      var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
-
-      $.post(webhookURL, JSON.stringify(message))
-        .done(function() {
-          console.log('Meddelande skickat till Discord!');
-        })
-        .fail(function(error) {
-          console.error('Fel vid sändning till Discord:', error);
-        });
-    });
-  });
-});
