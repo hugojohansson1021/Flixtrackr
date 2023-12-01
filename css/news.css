@@ -276,6 +276,22 @@ body {
 
 
 
+/* Standardstorlek för banner */
+.ad-banner img {
+  width: 100%; /* eller en specifik bredd i pixel */
+  height: auto; /* behåller bildförhållandet */
+  
+}
+
+/* Media Query för mobila enheter */
+@media (max-width: 600px) {
+  .ad-banner img {
+      width: 70%; /* eller en annan procentandel/px-storlek som passar för mobila enheter */
+      height: auto;
+  }
+}
+
+
 
 
 

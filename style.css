@@ -255,6 +255,7 @@ h1{
 .ad-banner img {
   width: 100%; /* eller en specifik bredd i pixel */
   height: auto; /* behåller bildförhållandet */
+  
 }
 
 /* Media Query för mobila enheter */
