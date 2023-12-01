@@ -162,7 +162,6 @@ document.getElementById('search-button').addEventListener('click', function() {
   var xhr = new XMLHttpRequest();
   var webhookURL = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
 
-//https://discord.com/api/webhooks/1154933075734695936/FrxC0nRffQrEKVdpw0UonXkboRt5KfLxTg3ltnN_Lwy2Sb1EdMvx0fvQRr6Mrf_0hCDg
 
   xhr.open('POST', webhookURL, true);
   xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -177,7 +176,24 @@ document.getElementById('search-button').addEventListener('click', function() {
   //alert('Meddelande skickat till Discord!');
 });
 
+document.getElementById('ad-banner-click').addEventListener('click', function() {
+  // Skapa en XMLHttpRequest för att skicka data till Discord-webhook.
+  var xhr = new XMLHttpRequest();
+  var webhookURL = 'https://discord.com/api/webhooks/1180176944101327009/aiVK0n1RTEicBQaT-0Ikfn6J24E2Oou-poAziiqtzcFD-hLECG608lLVHHB1thmWXBOL';
 
+
+  xhr.open('POST', webhookURL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+
+  var message = {
+      content: '"ad banner has min clicked"'
+  };
+
+  xhr.send(JSON.stringify(message));
+
+  //alert('Meddelande skickat till Discord!');
+});
 
 
 
