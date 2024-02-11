@@ -4,6 +4,7 @@ jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 15  # Set your desired timeout in minutes here
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
