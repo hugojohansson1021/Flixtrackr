@@ -8,6 +8,24 @@ body {
   min-height: 100vh; /* Ensure the body takes up the full viewport height */
 }
 
+
+
+
+.content-container {
+  max-width: 800px; /* eller en annan bredd du föredrar */
+  margin: auto;
+  padding: 0 20px; /* lägger till lite utrymme på sidorna */
+}
+
+
+
+
+
+
+
+
+
+
 header {
   background-color: #333;
   padding: 20px;
@@ -451,11 +469,6 @@ h1{
 
 
 
-.content-container {
-  max-width: 800px; /* eller en annan bredd du föredrar */
-  margin: auto;
-  padding: 0 20px; /* lägger till lite utrymme på sidorna */
-}
 
 
 
