@@ -6,11 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-    
+      uses: actions/checkout@v3
+
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server:  ftp.flixtrackr.com
-        username: ${{ secrets.FTP_USERNAME }}
+        server: ftp.flixtrackr.com
+        username: flixtrackr.com
         password: ${{ secrets.FTP_PASSWORD }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          fileToExclude.txt
