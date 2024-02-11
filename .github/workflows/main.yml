@@ -6,11 +6,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     
+    # Add Node.js setup step here if your workflow requires it
+    # - name: Use Node.js 20
+    #   uses: actions/setup-node@v2
+    #   with:
+    #     node-version: '20'
+
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      uses: SamKirkland/FTP-Deploy-Action@4.3.4
       with:
-        server:  ftp.flixtrackr.com
+        server: ftp.flixtrackr.com
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
