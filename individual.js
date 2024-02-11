@@ -1,6 +1,25 @@
 const urlParams = new URLSearchParams(window.location.search);
 const netflixId = urlParams.get('id');
 
+
+
+
+
+
+// Visa loader
+function showLoader() {
+  document.getElementById('loader').style.display = 'block';
+}
+
+// Dölj loader
+function hideLoader() {
+  document.getElementById('loader').style.display = 'none';
+}
+
+
+
+
+
 async function fetchMovieDetails(netflixId) {
   if (!netflixId) {
     console.error('Invalid Netflix ID');
@@ -165,6 +184,30 @@ function getCountryCode(country) {
 document.addEventListener('DOMContentLoaded', () => {
   fetchMovieDetails(netflixId);
 });
+
+
+// Visa loader
+function showLoader() {
+  document.getElementById('loader').style.display = 'block';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
