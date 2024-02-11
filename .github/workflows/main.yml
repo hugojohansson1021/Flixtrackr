@@ -6,13 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-
+      uses: actions/checkout@v2
+    
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: ftp.flixtrackr.com
-        username: flixtrackr.com
-        password: ${{ secrets.SFTP_PASSWORD }}
-        protocol: ftps
-        port: 22
+        server:  ftp.flixtrackr.com
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
