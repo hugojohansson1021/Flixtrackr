@@ -1,0 +1,6 @@
+.content-container {
+    max-width: 800px; /* eller en annan bredd du föredrar */
+    margin: auto;
+    padding: 0 20px; /* lägger till lite utrymme på sidorna */
+  }
+  
