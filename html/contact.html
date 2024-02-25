@@ -28,24 +28,47 @@
                 <li><a href="../index.html" class="nav-link">Search Movies</a></li>
                 <li><a href="/html/actors.html" class="nav-link">Search Actors</a></li>
                 <li><a href="/html/news.html" class="nav-link">News</a></li>
-                <li><a href="/html/series.html" class="nav-link">Series</a></li>
-                <li><a href="/html/vpns.html" class="nav-link">VPN:s</a></li>
+                
             </ul>
         </nav>
     </header>
 
+
+     <!--kontakta -->
+    
+     <div class="main" id="kontakta">
+        <div class="main_container">
+          <div class="main_content">
+  
+            <h1> This Site will be upgraded in to a Web App with more features</h1>
+            <br>
+            <p> Any ideas of extra features? </p>
+            <input type="text" id="messageInput" placeholder="type here ..."/>
+            <p class="metaTextMeddelande"> the web app will take some time to develope but will have extra features, like series realese calender and more, do you know some fun extra features </p>
+            <button id="sendMessage" onclick="sendDiscordMessage(document.getElementById('messageInput').value); setTimeout(function(){ window.location='../index.html'; }, 1500);">Send</button>
+
+          </div>
+   
+          </div>
+        </div>
+      </div>
+      
 
 
 
     <footer>
         <nav class="footer-navbar">
           <a href="../index.html" class="footer-link">Home</a>
-          <a href="/html/about.html" class="footer-link">About</a>
+          
           <a href="/html/contact.html" class="footer-link">Contact</a>
           <a href="/html/news.html" class="footer-link">News</a>
-          <a href="/html/series.html" class="footer-link">series</a>
+          
         </nav>
     </footer>
+
+
+
+    <script src="../script.js"></script>
 
 </body>
 </html>

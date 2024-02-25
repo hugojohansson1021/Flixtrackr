@@ -234,3 +234,56 @@ document.getElementById('ad-banner-click').addEventListener('click', function() 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function sendDiscordMessage(message) {
+  // Webhook-URL (ersätt med din webhook-URL)
+  const webhookUrl = 'https://discord.com/api/webhooks/1154913740853088337/2U0DhYpkSA6GRlTdcAA9mIryedS6yPcF6-jvJEeH2v0IhM4RudYF9qDeFXuXYR7MYIYb';
+
+  // Skapa en payload för att skicka data
+  const data = {
+    content: '[Meddelande från användare] : '+ message  // Meddelandet från inputfältet
+  };
+
+  // Använd fetch API för att skicka data till webhook
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data) // Konvertera data till JSON-sträng
+  })
+  .then(response => {
+    if (response.ok) {
+      alert('Message Sent!');
+    } else {
+      alert('noope!');
+    }
+  })
+  .catch(error => {
+    console.error('nopee:', error);
+    alert('noooooope!');
+  });
+}

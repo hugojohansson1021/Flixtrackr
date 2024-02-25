@@ -103,17 +103,19 @@ h1{
 .search-container {
   text-align: center;
   margin-top: 90px;
+  
 }
 
 #search-input {
   padding: 10px;
-  width: 300px;
+  width: 450px;
+  height: 40px;
   font-size: 16px;
   margin-right: 5px;
 }
 
 #search-button {
-  padding: 20px 35px;
+  padding:25px 40px;
   font-size: 16px;
   background-color: #333;
   color: #fff;
@@ -579,6 +581,12 @@ h1{
     
     /* Övriga stilar */
   }
+
+  .top-navbar {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
 }
 
 
@@ -594,12 +602,12 @@ h1{
 .movie-item p {
   /* Sätt maximal höjd och tillåt rullning */
   max-height: 100px;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .movie-item .synopsis {
   /* Klipp text och visa '...' för långa texter */
-  display: -webkit-box;
+  
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -620,3 +628,19 @@ h1{
 .search-button:hover {
   color: #fb1c1c;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
