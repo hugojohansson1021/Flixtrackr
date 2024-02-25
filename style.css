@@ -75,12 +75,17 @@ h1{
   text-align: center;
 }
 
+
+
+
 .metadata{
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   padding-left: 60px;
   padding-right: 60px;
 }
+
+
 
 .individual-NOTE{
   font-size: 15px;
@@ -97,23 +102,25 @@ h1{
 
 .search-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 #search-input {
   padding: 10px;
   width: 300px;
   font-size: 16px;
+  margin-right: 5px;
 }
 
 #search-button {
-  padding: 10px 20px;
+  padding: 20px 35px;
   font-size: 16px;
   background-color: #333;
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 30%; /* Make the button round */
+  border-radius: 45%; /* Make the button round */
+  text-decoration: none;
 }
 #search-button:hover {
   color: #fb1c1c;
@@ -172,6 +179,8 @@ h1{
 .movie-item p.article-content {
   flex-grow: 1;
 }
+
+
 
 
 
@@ -280,8 +289,9 @@ h1{
 /* Media Query för mobila enheter */
 @media (max-width: 600px) {
   .ad-banner img {
-      width: 70%; /* eller en annan procentandel/px-storlek som passar för mobila enheter */
+      width: 100%; /* eller en annan procentandel/px-storlek som passar för mobila enheter */
       height: auto;
+      justify-content: center;
   }
 }
 
@@ -459,12 +469,7 @@ h1{
 
 
 
-/* Add more flag icons for other countries as needed */
 
-
-.flag-icon.flag-icon-unknown {
-  background-color: red; /* Set a background color or any other styling you desire */
-}
 
 
 
@@ -497,34 +502,121 @@ h1{
 
 
 
-
-
-
-
-
-/* Media queries for responsive design */
+/* Media queries för responsiv design */
 @media screen and (max-width: 1200px) {
   .movie-item {
     width: 60%;
-    margin-right: 20px;
-    margin-left: 20px;
+    /* Övriga stilar */
   }
 }
 
 @media screen and (max-width: 992px) {
   .movie-item {
     width: 80%;
-    margin-right: 10px;
-    margin-left: 10px;
+    /* Övriga stilar */
   }
 }
+
+
 
 @media screen and (max-width: 768px) {
-  .movie-item {
-    width: 100%;
+  .metadata {
+    font-size: 12px; /* Minska textstorleken */
+    padding-left: 30px; /* Justera vänster padding om nödvändigt */
+    padding-right: 30px; /* Justera höger padding om nödvändigt */
+    /* Du kan lägga till ytterligare stilar här om du vill */
+  }
+  .p {
+    font-size: 12px; /* Minska textstorleken */
+    padding-left: 30px; /* Justera vänster padding om nödvändigt */
+    padding-right: 30px; /* Justera höger padding om nödvändigt */
+    /* Du kan lägga till ytterligare stilar här om du vill */
+  }
+
+  .content-container {
+    max-width: 600px; /* eller en annan bredd du föredrar */
+    margin: auto;
+    font-size: 12px;
+    padding: 0 20px; /* lägger till lite utrymme på sidorna */
+  }
+
+  .search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20%;
+  }
+  .search-container {
+    font-size: 200%; /* Ökar fontstorleken till 110% av ursprunglig storlek */
+    /* Justera andra storleksrelaterade stilar efter behov, t.ex. padding, margin */
+  }
+  
+  #search-button {
+    padding: 20px 35px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 45%; /* Make the button round */
+    text-decoration: none;
+  }
+  #search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
     margin-right: 5px;
-    margin-left: 5px;
+  }
+  .articles-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .movie-item {
+    width: 60px;
+    border-color: #000;
+    
+    /* Övriga stilar */
   }
 }
 
 
+
+
+.movie-item {
+  /* Använd flexbox eller grid för layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-item p {
+  /* Sätt maximal höjd och tillåt rullning */
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.movie-item .synopsis {
+  /* Klipp text och visa '...' för långa texter */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%; /* Make the button round */
+  text-decoration: none;
+}
+.search-button:hover {
+  color: #fb1c1c;
+}

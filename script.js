@@ -70,6 +70,7 @@ function createMovieCard(result) {
   // Create a link for the movie title
   const titleLink = document.createElement('a');
   titleLink.href = `individual.html?id=${nfid}`; // Add Netflix ID as a parameter in the link
+  titleLink.classList.add('search-button')
   titleLink.textContent = title;
 
   const titleElement = document.createElement('h2');
@@ -79,10 +80,18 @@ function createMovieCard(result) {
   vtypeElement.textContent = `Type: ${vtype}`;
 
   const synopsisElement = document.createElement('p');
+  synopsisElement.classList.add('synopsis');
   synopsisElement.textContent = synopsis;
+  
 
   const clistElement = document.createElement('p');
   clistElement.textContent = `Available in: ${clist}`;
+
+  
+  
+
+
+
 
   resultContainer.appendChild(titleElement);
   resultContainer.appendChild(vtypeElement);
@@ -103,6 +112,26 @@ function startLoadingAnimation() {
 
 
 
+
+
+function createAdBanner() {
+  // Skapar en ny div-element för annonsbannern
+  const adBanner = document.createElement('div');
+  adBanner.classList.add('ad-banner');
+
+  // Lägger till HTML-innehållet för annonsbannern
+  adBanner.innerHTML = `
+    <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=97031&url_id=902">
+        <img src="pictures/adBanner/faster-than-ever-1500x300.png" id="ad-banner-click">
+    </a>
+  `;
+  return adBanner;
+}
+
+
+
+
+
 // Function to display the movie cards
 function displayResults(results) {
   const searchResults = document.getElementById('search-results');
@@ -111,10 +140,18 @@ function displayResults(results) {
   const cardsPerRow = calculateCardsPerRow();
   const cardWidth = 100 / cardsPerRow;
 
-  results.forEach((result) => {
+  results.forEach((result, index) => {
     const resultContainer = createMovieCard(result);
     resultContainer.style.width = `${cardWidth}%`;
     searchResults.appendChild(resultContainer);
+
+
+
+    // Lägger till en annonsbanner efter varje andra filmkort
+    if ((index + 1) % 2 === 0) {
+      const adBanner = createAdBanner();
+      searchResults.appendChild(adBanner);
+    }
   });
 }
 
@@ -194,7 +231,6 @@ document.getElementById('ad-banner-click').addEventListener('click', function() 
 
   //alert('Meddelande skickat till Discord!');
 });
-
 
 
 
