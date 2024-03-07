@@ -121,7 +121,7 @@ h1{
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 45%; /* Make the button round */
+  border-radius: 25%; /* Make the button round */
   text-decoration: none;
 }
 #search-button:hover {
@@ -560,7 +560,7 @@ h1{
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 45%; /* Make the button round */
+    border-radius: 25%; /* Make the button round */
     text-decoration: none;
   }
   #search-input {
@@ -622,7 +622,7 @@ h1{
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 50%; /* Make the button round */
+  border-radius: 250%; /* Make the button round */
   text-decoration: none;
 }
 .search-button:hover {
