@@ -6,17 +6,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  background-color: #e9e9e9;
+  color: #000000;
 
 }
 
 
 
 
-.content-container {
-  max-width: 800px; /* eller en annan bredd du föredrar */
-  margin: auto;
-  padding: 0 20px; /* lägger till lite utrymme på sidorna */
-}
 
 
 
@@ -28,7 +25,7 @@ body {
 
 
 header {
-  background-color: #333;
+  background-color: #252525;
   padding: 20px;
   text-align: center;
 }
@@ -107,23 +104,30 @@ h1{
 }
 
 #search-input {
-  padding: 10px;
+  padding: 10px 20px; /* Horisontell och vertikal padding */
   width: 450px;
   height: 40px;
   font-size: 16px;
   margin-right: 5px;
+  opacity: 0.8; /* Använder decimalvärde istället för procent */
+  border-radius: 50px; /* Ger en mer uttalad rundad form */
+  border: none; /* Tar bort standardkanten */
+  background-color: rgba(255, 255, 255, 0.5); /* Lägger till en lätt genomskinlig vit bakgrund */
+  outline: 1px solid black;
 }
 
+
 #search-button {
-  padding:25px 40px;
+  padding: 20px 40px; /* Justera för att få en jämn bubbla */
   font-size: 16px;
   background-color: #333;
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 25%; /* Make the button round */
+  border-radius: 50px; /* Gör knappen helt rund */
   text-decoration: none;
 }
+
 #search-button:hover {
   color: #fb1c1c;
 }
@@ -138,14 +142,15 @@ h1{
 .movie-item {
   border: 1px solid #ccc;
   padding: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px; /* Enhetlig marginal runt om */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  border-radius: 30px; /* Rundade hörn för att skapa en bubbel-liknande effekt */
+  background-color: #fff; /* Lägg till en bakgrundsfärg om du vill */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Lägg till en skugga för mer djup */
 }
+
 
 .movie-item h2 {
   font-size: 16px;
@@ -215,7 +220,19 @@ h1{
 
 
 
-/* articals  */
+/* articles */
+
+
+
+.content-container {
+  max-width: 800px; /* Maxbredd som du föredrar */
+  margin: auto; /* Centrerar containern */
+  padding: 20px; /* Lägger till padding för att skapa utrymme runt innehållet */
+  display: flex; /* Använder flexbox för att ordna innehållet */
+  flex-direction: column; /* Ordna barn i en vertikal kolumn */
+  align-items: center; /* Centrerar innehållet horisontellt */
+}
+
 
 
 .articles-container {
@@ -225,30 +242,15 @@ h1{
 }
 
 .articalsOnHomePage {
-  width: calc(25% - 20px); /* Set the width for each article card with 20px margin */
+  width: calc(33% - 40px); /* Större bredd för varje artikelkort med beaktande av marginal */
   border: 1px solid #595959;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px;
+  border-radius: 15px; /* Mera uttalade rundade hörn för en bubbel-liknande effekt */
+  padding: 20px; /* Ökad padding för mer utrymme inuti kortet */
+  margin: 20px; /* Större marginal för mer utrymme runt korten */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
+  overflow: hidden; /* Ser till att inget innehåll går utanför kortets gränser */
 }
-
-/* Adjust the width and margin of the article cards for smaller screens */
-@media (max-width: 768px) {
-  .articalsOnHomePage {
-    width: calc(50% - 20px);
-  }
-}
-
-/* Adjust the width and margin of the article cards for even smaller screens */
-@media (max-width: 480px) {
-  .articalsOnHomePage {
-    width: calc(100% - 20px);
-  }
-}
-
-
 
 .article-title {
   margin-top: 0;
@@ -264,20 +266,26 @@ h1{
   font-style: italic;
   margin-bottom: 5px;
 }
-.artical-image-text{
+
+.artical-image-text {
   color: #595959;
   font-style: italic;
-  font-size:11px ;
+  font-size: 11px;
 }
 
 .article-image {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Bredden anpassas till kortets bredd */
+  height: auto; /* Höjden anpassas automatiskt */
+  border-top-left-radius: 15px; /* Rundade hörn på toppen för att matcha kortets stil */
+  border-top-right-radius: 15px;
+  display: block; /* Tar bort eventuellt extra utrymme under bilden */
+  object-fit: cover; /* Ser till att bilden täcker tillgängligt utrymme utan att förvrängas */
 }
 
 .article-image:hover {
   opacity: 0.8;
 }
+
 
 
 
@@ -553,21 +561,27 @@ h1{
     /* Justera andra storleksrelaterade stilar efter behov, t.ex. padding, margin */
   }
   
-  #search-button {
-    padding: 20px 35px;
+  .search-button {
+    padding: 10px 20px;
     font-size: 16px;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 25%; /* Make the button round */
+    border-radius: 250%; /* Make the button round */
     text-decoration: none;
   }
   #search-input {
-    padding: 10px;
-    width: 300px;
+    padding: 10px 20px; /* Horisontell och vertikal padding */
+    width: 240px;
+    height: 40px;
     font-size: 16px;
     margin-right: 5px;
+    opacity: 0.8; /* Använder decimalvärde istället för procent */
+    border-radius: 50px; /* Ger en mer uttalad rundad form */
+    border: none; /* Tar bort standardkanten */
+    background-color: rgba(255, 255, 255, 0.5); /* Lägger till en lätt genomskinlig vit bakgrund */
+    outline: 1px solid black;
   }
   .articles-container{
     display: flex;
@@ -628,6 +642,8 @@ h1{
 .search-button:hover {
   color: #fb1c1c;
 }
+
+
 
 
 
