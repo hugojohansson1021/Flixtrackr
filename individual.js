@@ -30,7 +30,7 @@ async function fetchMovieDetails(netflixId) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'ea288c17a7msh6a19bba9fede2fbp19d33cjsn1edce30e03b0',
+      'X-RapidAPI-Key': '###############',
       'X-RapidAPI-Host': 'unogsng.p.rapidapi.com'
     }
   };
@@ -51,7 +51,7 @@ async function fetchAvailability(netflixId) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'ea288c17a7msh6a19bba9fede2fbp19d33cjsn1edce30e03b0',
+      'X-RapidAPI-Key': '##########################',
       'X-RapidAPI-Host': 'unogsng.p.rapidapi.com'
     }
   };

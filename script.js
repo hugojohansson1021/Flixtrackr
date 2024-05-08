@@ -14,7 +14,7 @@ const url = 'https://unogsng.p.rapidapi.com/search';
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'ea288c17a7msh6a19bba9fede2fbp19d33cjsn1edce30e03b0',
+    'X-RapidAPI-Key': '################',
     'X-RapidAPI-Host': 'unogsng.p.rapidapi.com'
   }
 };
